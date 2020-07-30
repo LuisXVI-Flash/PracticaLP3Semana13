@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            {% block title%}
+
+            {% endblock %}
+            ..::Luis Angel::..
+        </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    </head>
+    <body>
+        <header>
+            <div id="logotipo">
+                <img src="{% static 'images/flash1.png' %}"/>
+                <h1>
+                    Proyecto Web (LP3)
+                </h1>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/LuisAngel">Inicio</a>
+                </li>
+                <li>
+                    <a href="/saludo">Mensaje de Saludo</a>
+                </li>
+                <li>
+                    <a href="/foto1">Foto1</a>
+                </li>
+                <li>
+                    <a href="/foto2">Foto2</a>
+                </li>
+            </ul>
+        </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+        
+    </div>
+    
+    <div id ="content">
+        <div class="box">
+            
+            {% block content %}
+                <strong> 
+                    Contenido en Layout (Padre)
+                    I'm inevitable
+                </strong>        
+            {% endblock %}
+        </div>
+    </div>
+    
+        <footer>
+            UNTELS - Lenguaje de Programación III &COPY; Luis Angel Izquierdo Rojas
+        </footer>
+    
+
+    </body>
+</html>
